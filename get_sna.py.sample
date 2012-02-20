@@ -1,0 +1,11 @@
+import _mysql
+
+from snalib.drupal import get_comments_to_nodes, get_comments_to_comments
+
+def main():
+    db = _mysql.connect(host="", user="", passwd="", db="")
+    get_comments_to_nodes(db)
+    get_comments_to_comments(db)
+
+if __name__ == "__main__":
+    main()
